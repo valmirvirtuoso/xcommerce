@@ -149,7 +149,6 @@ export function Modal ({isOpen, setIsOpen}: ModalProps) {
                                 <input 
                                     id="sales" 
                                     type="number" 
-                                    placeholder="Digite as vendas do produto"
                                     {...register("sales", { valueAsNumber: true })}
                                 />
 
@@ -162,7 +161,6 @@ export function Modal ({isOpen, setIsOpen}: ModalProps) {
                                 <input 
                                     id="price" 
                                     type="number" 
-                                    placeholder="Digite o preço do produto"
                                     {...register("price", { valueAsNumber: true })}
                                 />
 
