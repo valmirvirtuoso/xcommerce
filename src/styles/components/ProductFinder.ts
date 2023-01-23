@@ -15,15 +15,10 @@ export const ProductFinderContainer = styled("div", {
 
     borderBottom: "1px solid rgba(255, 255, 255, 0.10)",
 
-    "h2, input": {
-
-        marginBottom: "3.75rem",
-
-    },
-
     h2: {
 
         fontSize: "$2xl",
+        marginBottom: "3.75rem",
 
     },
 
@@ -34,7 +29,44 @@ export const ProductFinderContainer = styled("div", {
 
         padding: "0.9375rem",
 
-        width: "427px",
+        width: "100%",
+
+        maxWidth: "427px",
+        
+        "&:focus": {
+
+            outline: "none",
+
+        },
+
+    },
+
+    "@media (max-width: 550px)": {
+
+        flexDirection: "column",
+
+    },
+
+});
+
+export const InputContainer = styled("div", {
+
+    display: "flex",
+    alignItems: "center",
+
+    width: "100%",
+
+    backgroundColor: "$white",
+
+    paddingLeft: "1.25rem",
+
+    marginBottom: "3.75rem",
+
+    borderRadius: "8px",
+
+    "&:focus-within": {
+
+        outline: "3px solid $blue200",
 
     },
 
@@ -62,7 +94,7 @@ export const FilterButtonsContainer = styled("div", {
 
         color: "$white",
 
-        padding: "8px",
+        padding: "0.5rem",
 
         border: "none",
         borderRadius: "8px",
@@ -73,6 +105,13 @@ export const FilterButtonsContainer = styled("div", {
             cursor: "pointer",
 
         },
+
+    },
+
+    "@media (max-width: 1400px)": {
+
+        justifyContent: "center",
+        gap: "0.9375rem",
 
     },
 

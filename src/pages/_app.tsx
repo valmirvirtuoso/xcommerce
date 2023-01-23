@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
-import { Header } from "../components/Header";
+import { Header, ProductFinder } from "@components";
 import { globalStyles } from "../styles/global";
+import { ProductProvider } from "@/src/contexts/productsContext";
+import "../server/mirage";
 
 globalStyles();
 
@@ -9,9 +11,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
     <div>
 
-      <Header />
-      
-      <Component {...pageProps} />
+      <ProductProvider>
+
+        <Header />
+
+        <ProductFinder />
+        
+        <Component {...pageProps} />
+        
+      </ProductProvider>
 
     </div>
 

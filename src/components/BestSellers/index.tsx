@@ -1,35 +1,64 @@
-import { BestSellersContainer } from "@/src/styles/components/BestSellers";
-import Image from "next/image";
+import { useProducts } from "@/src/contexts/productsContext";
 
-import mockupImg from "../../assets/photo.svg";
+import { usePagination } from "@/src/hooks/usePagination";
+
+import { PaginationReturnHook } from "@/src/interfaces";
+
+import { BestSellersContainer, BestSellersContent, HeaderContainer, Pages } from "@/src/styles/components/BestSellers";
+
+import { ProductBestSeller } from "@components";
 
 export function BestSellers () {
 
+    const { bestSellersProducts } = useProducts();
+
+    const { 
+        pagination, 
+        rangeOfProductsPerPage, 
+        nextPage, 
+        previousPage
+    }: PaginationReturnHook = usePagination(bestSellersProducts, 6);
+
     return (
 
-        <BestSellersContainer>
+        <BestSellersContainer className="ContainerContent">
 
-            <header>
+            <HeaderContainer>
 
                 <h3>Mais vendidos</h3>
-                <i className='bx bx-left-arrow-alt'></i>
-                <i className='bx bx-right-arrow-alt'></i>
-
-            </header>
-
-            <div>
 
                 <div>
-
-                    <Image src={mockupImg} alt="produto mocado" width="168" height="148"/>
-
-                    <span>R$ 31,67</span>
-                    <span>203 vendas</span>
-                    <p>Kit 10 Un.Adesivo (...)</p>
-
+                    <button onClick={previousPage}><i className='bx bx-left-arrow-alt'></i></button>
+                    <button onClick={nextPage}><i className='bx bx-right-arrow-alt'></i></button>
                 </div>
 
-            </div>
+            </HeaderContainer>
+
+            <BestSellersContent>
+
+                {rangeOfProductsPerPage.map((product) => {
+
+                    return (
+
+                        <ProductBestSeller 
+                            key={product.code}
+                            name={product.name} 
+                            sales={product.sales} 
+                            price={product.price} 
+                            imageUrl={product.imgUrl}
+                        />
+
+                    )
+
+                })}
+                
+            </BestSellersContent>
+
+            <Pages>
+
+                <p>Página {pagination.currentPage} de {pagination.totalPages}</p>
+
+            </Pages>
 
         </BestSellersContainer>
 

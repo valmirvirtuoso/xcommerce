@@ -12,7 +12,7 @@ export const globalStyles = globalCss({
 
     body: {
 
-        backgroundColor: "$gray100",
+        backgroundColor: "$white",
         color: "$gray100",
         "-webkit-font-smoothing": "antialiased",
 
@@ -24,5 +24,14 @@ export const globalStyles = globalCss({
         fontWeight: 400,
 
     },
+
+    ".ContainerContent": {
+
+        width: "100%",
+        maxWidth: "1400px",
+
+        margin: "0 auto",
+
+    }
 
 })

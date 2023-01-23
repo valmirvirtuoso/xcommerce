@@ -1,40 +1,53 @@
-import { FilterButtons, FilterButtonsContainer, ProductFinderContainer, ProductFinderStyled } from "@/src/styles/components/ProductFinder";
-import { Button } from "../Button";
+import { useProducts } from "@/src/contexts/productsContext";
+import { FilterButtons, FilterButtonsContainer, InputContainer, ProductFinderContainer, ProductFinderStyled } from "@/src/styles/components/ProductFinder";
+import { useState } from "react";
+import { Button, Modal} from "@components";
 
 export function ProductFinder () {
+
+    const { 
+        handleFilteredProducts, 
+        handleFilterFavoriteProducts, 
+        handleAllProducts
+    } = useProducts();
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
 
         <ProductFinderStyled>
 
-            <ProductFinderContainer>
-                <h2>Produtos</h2>
-                <form>
-                    <input
-                        type="text"
-                        id="product"
-                        list="products-suggestions"
-                        placeholder="Buscar por produtos"
-                    />
-                    <datalist id="products-suggestions">
-                        <option value="Produto 1" />
-                        <option value="Produto 2" />
-                        <option value="Produto 3" />
-                        <option value="Banana" />
-                    </datalist>
-                </form>
-            </ProductFinderContainer>
+            <div className="ContainerContent">
+                <ProductFinderContainer>
+                    <h2>Produtos</h2>
+                    <form>
+                        <InputContainer>
+                            <i className='bx bx-search' style={ {fontSize: "24px", color: "#99A0B0"} }></i>
+                            <input
+                                type="text"
+                                id="product"
+                                list="products-suggestions"
+                                placeholder="Buscar por produtos"
+                                onChange={handleFilteredProducts}
+                            />
+                        </InputContainer>
+                    </form>
+                </ProductFinderContainer>
 
-            <FilterButtonsContainer>
+                <FilterButtonsContainer>
 
-                <FilterButtons>
-                    <Button>Todas</Button>
-                    <Button>Favoritos</Button>
-                </FilterButtons>
+                    <FilterButtons>
+                        <Button onClick={handleAllProducts}>Todas</Button>
+                        <Button onClick={handleFilterFavoriteProducts}>Favoritos</Button>
+                    </FilterButtons>
 
-                <Button>Criar novo</Button>
+                    <Button onClick={() => setIsOpen(true)}>Criar novo</Button>
 
-            </FilterButtonsContainer>
+                </FilterButtonsContainer>
+
+            </div>
+
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}/>
 
         </ProductFinderStyled>
 

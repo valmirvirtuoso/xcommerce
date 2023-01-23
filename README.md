@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Para fazer funcionar
 
-## Getting Started
+Apenas de um "npm install" / "yarn" apóes a clonagem do repositório.
+Após isso rode o comando "npm run dev"/ "yarn dev" para rodar a aplicação.
 
-First, run the development server:
+# Detalhes do projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Alguns SVGs da pasta "/assets" são apenas para itens mocados por exemplo um produto 
+que não possui uma imagem
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Componentes
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+A aplicação possui 7 componentes. Eles estão sendo importados no arquivo "index.ts"
+dentro da pasta de "/components". Isso está sendo feito para ser usado uma das facilidades
+do webpack de "resolvers alias" onde posso encurtar o caminho de importação dos arquivos 
+deixando o código assim mais limpo.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+O componente onde está a lista de Todos os produtos é o "AllProducts", lá você encontrará 
+a table que possui todos os itens da tabela, seus arquivos de estilização estão na pasta de 
+"./styles/components/AllProducts.ts".
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Foi ultilizado como maneira de estilização o Stitches.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+A lista de Produtos mais vendidos estão dividas em 2 componentes o "BestSellers" onde está o container 
+dessa lista e "ProductBestSeller onde estou cuidando especificamente de cada item da interação que acontece
+no componente container.
 
-## Learn More
+Temos também 2 componente simples de Header e Button.
 
-To learn more about Next.js, take a look at the following resources:
+Os ultimos componentes são o "ProductFinder" onde estão os botões de filtro e o input para
+digitar o nome de qualquer produto. E o componente de Modal, onde está o formulário para cadastro de
+um novo produto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Contextos
+Também possuimos um arquivo de context onde estão todas as lógicas cruciais do sistema.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Hooks
+É onde está o hook criado chamado "usePagination" responsável pela paginação tanto da tabela quanto
+da lista de mais vendidos.
 
-## Deploy on Vercel
+# Interfaces
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+É onde estão todas as interfaces e um type do projeto.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Server
+É aqui que está sendo usado o miragejs, admito que foi implementado de forma bem simples com apenas 2 rotas.

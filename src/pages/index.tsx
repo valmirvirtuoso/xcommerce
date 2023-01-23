@@ -1,27 +1,15 @@
-import { AllProducts } from "../components/AllProducts"
-import { BestSellers } from "../components/BestSellers"
-import { ProductFinder } from "../components/ProductFinder"
-import { styled } from "../styles"
-
-const Teste = styled("h1", {
-
-  background: "$blue200"
-
-})
-
+import { AllProducts, BestSellers } from "@components";
+import { HomeContainer } from "../styles/pages/Home";
 export default function Home() {
-
 
   return (
 
-    <div>
-
-      <ProductFinder />
+    <HomeContainer className="ContainerContent">
 
       <BestSellers />
       <AllProducts />
       
-    </div>
+    </HomeContainer>
 
   )
 }
