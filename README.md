@@ -2,10 +2,8 @@
 ![Logo of the project](./src/assets/logo.svg)
 
 
-## Blog Lucas Fernandes
-This is my blog \o/ 
-Enjoy It and I hope you can learn a lot!
-
+## Meu Portifólio
+![Portifolio](https://valmirvirtuoso.com)
 
 ## Técnologias
 
@@ -43,44 +41,33 @@ Aqui estão as tecnológias utilizadas no projeto
 
 ![Homepage image](./src/assets/readme/paginaHome.png)
 
-### 2 - You can also see a lot of information on the Blog posts session.
+### 2 - Se clicar no botão de favoritos lá são listados todos os itens favoritados por você. Se quiser voltar ao normal apenas clique em "todos"
 
-![Posts](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/posts.png)
+![Favorite Filter](./src/assets/readme/favoritos.png)
 
-### 3 - Or access some of the posts :D
+### 3 - Também pode filtrar utilizando a barra de pesquisa
 
-![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_1.png)
-![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_2.png)
-![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_3.png)
+![Serach for Input](./src/assets/readme/filtragemPeloCampo.png)
 
-### 4 - Or you can see my personal Portfolio.
+### 4 - Cadastro de novos produtos 
 
-![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_1.png)
-![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_2.png)
+![Post show](./src/assets/readme/criacaoDeProdutos.png)
 
 
 ## Features
 
-The main features of the application are:
- - Publish Posts.
- - Learn a lot of information <3
+As principais features do sistema são:
+ - Filtrar os produtos pelo campo, e pelos botões.
+ - Cadastro de novos produtos.
 
+  ## Version
 
-## Links
-  - Deploy on Heroku: https://lucas-dev.com/
-  - Repository: https://github.com/Lucasdfg07/Blog_Lucas_Fernandes
-    - In case of sensitive bugs like security vulnerabilities, please contact
-      Lucassiqueiraferandes07@gmail.com directly instead of using issue tracker. We value your effort
-      to improve the security and privacy of this project!
-
-  ## Versioning
-
-  1.0.0.0
+  1.0.
 
 
   ## Authors
 
-  * **Lucas Siqueira Fernandes** 
+  * **Valmir Mendes Virtuoso Filho** 
 
-  Please follow github and join us!
-  Thanks to visiting me and good coding!
+  Me siga no github e muito obrigado!
+  Obrigado por ver o projeto!
