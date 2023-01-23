@@ -1,46 +1,86 @@
-# Para fazer funcionar
 
-Apenas de um "npm install" / "yarn" apóes a clonagem do repositório.
-Após isso rode o comando "npm run dev"/ "yarn dev" para rodar a aplicação.
+![Logo of the project](./src/assets/logo.svg)
 
-# Detalhes do projeto
 
-Alguns SVGs da pasta "/assets" são apenas para itens mocados por exemplo um produto 
-que não possui uma imagem
+## Blog Lucas Fernandes
+This is my blog \o/ 
+Enjoy It and I hope you can learn a lot!
 
-## Componentes
 
-A aplicação possui 7 componentes. Eles estão sendo importados no arquivo "index.ts"
-dentro da pasta de "/components". Isso está sendo feito para ser usado uma das facilidades
-do webpack de "resolvers alias" onde posso encurtar o caminho de importação dos arquivos 
-deixando o código assim mais limpo.
+## Técnologias
 
-O componente onde está a lista de Todos os produtos é o "AllProducts", lá você encontrará 
-a table que possui todos os itens da tabela, seus arquivos de estilização estão na pasta de 
-"./styles/components/AllProducts.ts".
+Aqui estão as tecnológias utilizadas no projeto
 
-Foi ultilizado como maneira de estilização o Stitches.
+* NextJS
+* ReactJS
+* TypeScript
+* Stitches
+* Zod
+* MirageJS
+* React toastify
 
-A lista de Produtos mais vendidos estão dividas em 2 componentes o "BestSellers" onde está o container 
-dessa lista e "ProductBestSeller onde estou cuidando especificamente de cada item da interação que acontece
-no componente container.
+## Getting started
 
-Temos também 2 componente simples de Header e Button.
+* Dependencias
+  - NextJS
+  - ReactJS
 
-Os ultimos componentes são o "ProductFinder" onde estão os botões de filtro e o input para
-digitar o nome de qualquer produto. E o componente de Modal, onde está o formulário para cadastro de
-um novo produto.
+* Para iniciar o projeto
+  
+### Primeiro
+  - npm install
+  or
+  - yarn
 
-# Contextos
-Também possuimos um arquivo de context onde estão todas as lógicas cruciais do sistema.
+### Segundo
+ - npm run dev
+ or
+ - yarn dev 
 
-# Hooks
-É onde está o hook criado chamado "usePagination" responsável pela paginação tanto da tabela quanto
-da lista de mais vendidos.
+## Como usar
 
-# Interfaces
+### 1 - Quando você acessar verá a primeira e única página da aplicação onde você podera filtrar e favoritar produtos.
 
-É onde estão todas as interfaces e um type do projeto.
+![Homepage image](./src/assets/readme/paginaHome.png)
 
-# Server
-É aqui que está sendo usado o miragejs, admito que foi implementado de forma bem simples com apenas 2 rotas.
+### 2 - You can also see a lot of information on the Blog posts session.
+
+![Posts](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/posts.png)
+
+### 3 - Or access some of the posts :D
+
+![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_1.png)
+![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_2.png)
+![Post show](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/post_3.png)
+
+### 4 - Or you can see my personal Portfolio.
+
+![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_1.png)
+![Portfolio](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/public/readme/portfolio_2.png)
+
+
+## Features
+
+The main features of the application are:
+ - Publish Posts.
+ - Learn a lot of information <3
+
+
+## Links
+  - Deploy on Heroku: https://lucas-dev.com/
+  - Repository: https://github.com/Lucasdfg07/Blog_Lucas_Fernandes
+    - In case of sensitive bugs like security vulnerabilities, please contact
+      Lucassiqueiraferandes07@gmail.com directly instead of using issue tracker. We value your effort
+      to improve the security and privacy of this project!
+
+  ## Versioning
+
+  1.0.0.0
+
+
+  ## Authors
+
+  * **Lucas Siqueira Fernandes** 
+
+  Please follow github and join us!
+  Thanks to visiting me and good coding!
